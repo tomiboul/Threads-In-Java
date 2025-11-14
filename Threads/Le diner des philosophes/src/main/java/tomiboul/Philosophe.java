@@ -92,10 +92,10 @@ public class Philosophe implements Runnable{
     @Override
     public void run() {
         try {
-            while (true) { // tourne en boucle
+            do {
                 think();
-                thinkingToStarving(); // essaie de manger
-            }
+                thinkingToStarving();
+            } while (true);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

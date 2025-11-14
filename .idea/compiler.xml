@@ -10,5 +10,8 @@
         <module name="Le_diner_des_philosophes" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Tour-De-France" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

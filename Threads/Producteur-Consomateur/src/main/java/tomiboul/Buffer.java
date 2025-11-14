@@ -9,18 +9,12 @@ public class Buffer {
 
     public Buffer() {}
 
-    public Buffer(int[] buffer,  boolean full,  boolean empty) {
-        this.buffer = buffer;
-        this.full = full;
-        this.empty = empty;
-    }
-
     public synchronized void put(int value) {
         while (full) {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Buffer was interrupted : 1");
+                System.out.println("Buffer was interrupted : put()");
             }
         }
         addInBuffer(value);
@@ -28,12 +22,12 @@ public class Buffer {
         notifyAll();
     }
 
-    public synchronized void remove(){
-        while(empty){
+    public synchronized void remove() {
+        while (empty) {
             try {
                 wait();
             } catch (InterruptedException e) {
-                System.out.println("Buffer was interrupted : 2");
+                System.out.println("Buffer was interrupted : remove()");
             }
         }
         removeInBuffer();
@@ -41,48 +35,51 @@ public class Buffer {
         notifyAll();
     }
 
-
     private void addInBuffer(int value) {
-        boolean bufferReallyFull = true;
+        boolean foundPlace = false;
+
         for (int i = 0; i < buffer.length; i++) {
             if (buffer[i] == 0) {
                 buffer[i] = value;
-                bufferReallyFull = false;
-                if (buffer[buffer.length - 1] != 0) {
+                foundPlace = true;
+                if (isBufferFull()) {
                     full = true;
                 }
                 break;
             }
         }
-        assert !bufferReallyFull : "buffer is full";
+
+        assert foundPlace : "Buffer FULL mais flag full était faux";
     }
 
-    public void removeInBuffer() {
-        assert buffer.length > 1 : "buffer doesn't contain more than 1 element";
-        buffer = Arrays.copyOfRange(buffer, 1,  buffer.length);
-        if (buffer[0] == 0){
+    private void removeInBuffer() {
+        buffer[0] = 0;
+
+        for (int i = 0; i < buffer.length - 1; i++) {
+            buffer[i] = buffer[i+1];
+        }
+        buffer[buffer.length - 1] = 0;
+
+        if (isBufferEmpty()) {
             empty = true;
         }
     }
 
-
-    public int[] getBuffer() {
-        return buffer;
-    }
-    public void setBuffer(int[] buffer) {
-        this.buffer = buffer;
-    }
-    public void printBuffer(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("Buffer: ");
-        for (int i = 0; i < buffer.length; i++) {
-            if (i != buffer.length-1 ){
-                sb.append(buffer[i]).append(", ");
-            }
-            else  {
-                sb.append(buffer[i]);
-            }
+    private boolean isBufferFull() {
+        for (int val : buffer) {
+            if (val == 0) return false;
         }
-        System.out.println(sb);
+        return true;
+    }
+
+    private boolean isBufferEmpty() {
+        for (int val : buffer) {
+            if (val != 0) return false;
+        }
+        return true;
+    }
+
+    public void printBuffer() {
+        System.out.println("Buffer : " + Arrays.toString(buffer));
     }
 }
