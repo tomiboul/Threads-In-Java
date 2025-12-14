@@ -16,7 +16,7 @@ public class Philosophe implements Runnable{
         this.forkRight = forkRight;
     }
 
-    public synchronized void thinkingToStarving() throws InterruptedException {
+    public void thinkingToStarving() throws InterruptedException {
         state = State.STARVING;
         long start = System.currentTimeMillis();
         long MAX_WAIT = 2000;   // 2 sec d att

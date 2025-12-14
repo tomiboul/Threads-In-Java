@@ -7,10 +7,13 @@
         <option value="$PROJECT_DIR$/Threads/Le diner des philosophes/pom.xml" />
         <option value="$PROJECT_DIR$/Threads/Producteur-Consomateur/pom.xml" />
         <option value="$PROJECT_DIR$/Tour-De-France/pom.xml" />
+        <option value="$PROJECT_DIR$/Tour De France/pom.xml" />
+        <option value="$PROJECT_DIR$/Threads/Tour_De_France/pom.xml" />
+        <option value="$PROJECT_DIR$/Threads/Bank_Counters/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="corretto-24" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
