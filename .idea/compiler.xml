@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Le_diner_des_philosophes" />
         <module name="Tour_De_France" />
         <module name="Tour-De-France" />
-        <module name="Le_diner_des_philosophes" />
+        <module name="Workflow" />
         <module name="Bank_Counters" />
         <module name="Producteur-Consomateur" />
+        <module name="Lecteurs_Redacteurs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

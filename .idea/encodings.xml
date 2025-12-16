@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/Threads/Bank_Counters/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Le diner des philosophes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Le diner des philosophes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Threads/Lecteurs_Redacteurs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Threads/Lecteurs_Redacteurs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Producteur-Consomateur/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Producteur-Consomateur/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Tour De France/src/main/java" charset="UTF-8" />
@@ -13,5 +15,7 @@
     <file url="file://$PROJECT_DIR$/Threads/Tour-De-France/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Tour_De_France/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Threads/Tour_De_France/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Threads/Workflow/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Threads/Workflow/src/main/resources" charset="UTF-8" />
   </component>
 </project>

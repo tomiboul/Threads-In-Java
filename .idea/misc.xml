@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/Tour De France/pom.xml" />
         <option value="$PROJECT_DIR$/Threads/Tour_De_France/pom.xml" />
         <option value="$PROJECT_DIR$/Threads/Bank_Counters/pom.xml" />
+        <option value="$PROJECT_DIR$/Threads/Workflow/pom.xml" />
+        <option value="$PROJECT_DIR$/Threads/Lecteurs_Redacteurs/pom.xml" />
       </list>
     </option>
   </component>
